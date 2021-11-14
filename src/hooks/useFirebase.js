@@ -12,13 +12,16 @@ const useFirebase = () => {
     const auth = getAuth();
 
 
-    const registerUser = (email, password, name) => {
+    const registerUser = (email, password, name, location, history) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+
                 const user = userCredential.user;
                 const newUser = { email, displayName: name }
+
                 setUser(newUser);
                 //    save to databsse
                 saveUser(email, name, 'POST')
@@ -31,14 +34,13 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    const loginUser = (email, password) => {
+    const loginUser = (email, password, location, history) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
 
-                // ...
             })
             .catch((error) => {
                 const errorCode = error.code;

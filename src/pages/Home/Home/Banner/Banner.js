@@ -12,14 +12,14 @@ const verticalCenter = {
 
 const Banner = () => {
     return (
-        <Container sx={{ flexGrow: 1, my: 5 }} style={{ backgroundColor: '#d3ecf0', height: '450px' }}>
+        <Container sx={{ flexGrow: 1, my: 5 }} style={{ backgroundColor: '#d3ecf0', height: '500px' }}>
             <Grid container spacing={2}>
-                <Grid style={verticalCenter} item xs={12} md={5}>
+                <Grid style={verticalCenter} item xs={12} md={7}>
                     <Box>
-                        <Typography variant="h4" color="#c4541b" sx={{ my: 3 }}>
-                            Kids stationary 2021
+                        <Typography variant="h4" color="#c4541b" sx={{ my: 3, fontSize: 50, fontWeight: 'bold', m: 1, letterSpacing: 5, }}>
+                            Kids stationary
                         </Typography>
-                        <Typography variant="h3" color="#200942">
+                        <Typography variant="h3" color="#200942" sx={{ fontSize: 35, fontWeight: 'bold', m: 1, letterSpacing: 6, }}>
                             Stationary Adventure
                         </Typography>
                         <Typography variant="h6" sx={{ fontSize: 14, fontWeight: 300, color: 'gray', my: 3 }}>
@@ -28,7 +28,7 @@ const Banner = () => {
                         <Button variant="contained" style={{ backgroundColor: '#110c3d' }}>Shop Now</Button>
                     </Box>
                 </Grid>
-                <Grid item xs={12} md={7} style={verticalCenter}>
+                <Grid item xs={12} md={5} style={verticalCenter}>
                     <img
                         style={{ width: '400px', height: '250px' }}
                         src="https://cdn.shopify.com/s/files/1/0024/7712/9777/files/newsletter-popup.jpg?v=1558890852" alt="" />

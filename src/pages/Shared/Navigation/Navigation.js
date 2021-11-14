@@ -13,7 +13,7 @@ const Navigation = () => {
     const { user, logOut } = useAuth();
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" style={{ backgroundColor: 'white', height: '90px' }}>
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -24,24 +24,24 @@ const Navigation = () => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        MUIKID
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontSize: 30, fontWeight: 'bold', m: 1, letterSpacing: 6, }} style={{ color: '#110c3d' }} >
+                        KIDS STATIONARY
                     </Typography>
-                    <Link to="/explore"><Button color="inherit">Explore</Button></Link>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to="/explore"><Button sx={{ backgroundColor: '#200942' }} color="inherit">Explore</Button></Link>
 
                     {
                         user?.email ?
                             <Box>
                                 <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">
-                                    <Button color="inherit">Dashboard</Button>
+                                    <Button sx={{ backgroundColor: '#200942' }} color="inherit">Dashboard</Button>
                                 </NavLink>
 
-                                <Button onClick={logOut} color="inherit">LogOut</Button>
+                                <Button onClick={logOut} sx={{ backgroundColor: '#200942' }} color="inherit">LogOut</Button>
                             </Box>
 
                             :
                             <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login">
-                                <Button color="inherit">Login</Button>
+                                <Button sx={{ backgroundColor: '#200942' }} color="inherit">Login</Button>
                             </NavLink>
                     }
 

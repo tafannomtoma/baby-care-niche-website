@@ -1,7 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
@@ -23,7 +22,7 @@ const Product = (props) => {
                 />
                 <CardContent>
                     <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
-                        Price: {price}
+                        Price: ${price}
                     </Typography>
                     <Typography variant="h5" component="div">
                         {Name}
@@ -34,7 +33,7 @@ const Product = (props) => {
                     </Typography>
                 </CardContent>
                 <Link to={`/purchase/${_id}`}>
-                    <Button variant="contained" size="small">Purchase</Button>
+                    <Button sx={{ mb: 3, }} style={{ textDecoration: 'none', backgroundColor: '#200942' }} variant="contained" size="small">Purchase</Button>
                 </Link>
 
 
