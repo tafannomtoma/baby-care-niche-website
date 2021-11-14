@@ -9,7 +9,7 @@ const AddReview = () => {
         console.log(data)
 
 
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://infinite-spire-31198.herokuapp.com/reviews', data)
             .then(res => {
                 if (res.data.inserted) {
                     alert('added successfully')

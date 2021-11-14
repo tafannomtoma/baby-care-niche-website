@@ -11,7 +11,7 @@ const Purchase = () => {
     const onSubmit = data => {
         console.log(data)
 
-        axios.post('http://localhost:5000/order', data)
+        axios.post('https://infinite-spire-31198.herokuapp.com/order', data)
             .then(res => {
                 if (res.data.inserted) {
                     alert('added successfully')
@@ -26,7 +26,7 @@ const Purchase = () => {
     const [produtcsDetails, setProductsDetails] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://infinite-spire-31198.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setProductsDetails(data))
     }, [])

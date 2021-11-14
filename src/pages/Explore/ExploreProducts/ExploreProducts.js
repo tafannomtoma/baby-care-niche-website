@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const ExploreProducts = (props) => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://infinite-spire-31198.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
 

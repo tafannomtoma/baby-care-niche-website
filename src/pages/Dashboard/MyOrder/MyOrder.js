@@ -13,13 +13,13 @@ const MyOrder = () => {
     const { user } = useAuth();
     const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/order')
+        fetch('https://infinite-spire-31198.herokuapp.com/order')
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, []);
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/order/${id}`;
+        const url = `https://infinite-spire-31198.herokuapp.com/order/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

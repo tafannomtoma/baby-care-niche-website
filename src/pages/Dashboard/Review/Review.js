@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 const Review = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://infinite-spire-31198.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
