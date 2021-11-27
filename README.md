@@ -16,13 +16,13 @@ pass is dfrnt bcz if i dont use 8 length then login system doesn't work..so pls 
 1.This webiste is for kids stationary.
 
 
-2.You can see many products in here for kids.
+2.Build this website with firebase authentication.Here You can login/signup for your secured account.
 
-3.school going baby are fasinated by cute staffs and its helpful for them
+3.Here admin can add/delete/update product.and if he wants make a brand new admin.
 
-4. you can purchasee all over in asian country
+4. User can rate our products, they can review their valuable comments.Here they can see dashborad with their oders.
 
-5.you can also return your product.
+5.admin can controlled in center each and every order and users.
 
 6.Colorful suttfs you can find easily in here.
 
